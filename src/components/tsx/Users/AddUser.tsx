@@ -26,7 +26,7 @@ const AddUser = ({ onAddUser }: IAddUser) => {
 		if (enteredAge < 1) {
 			return;
 		}
-		onAddUser();
+		onAddUser({ userName: enteredUserName, userAge: enteredAge });
 		setEnteredAge(0);
 		setEnteredUserName("");
 	};
