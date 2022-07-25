@@ -12,7 +12,10 @@ function App() {
 
 	const addUserHandler = ({ userName, userAge }: IAddUserHandler) => {
 		setUsersList((prevState: User[]) => {
-			return [...prevState, { name: userName, age: userAge }];
+			return [
+				...prevState,
+				{ name: userName, age: userAge, id: Math.random() },
+			];
 		});
 	};
 
